@@ -1,13 +1,7 @@
-[
-  {
-    "plugin": "TwojPluginA",
-    "key": "A-ABC-123-XYZ",
-    "active": true,
-    "expiresAt": "2027-12-31T23:59:59Z"
-  },
-  {
-    "plugin": "TwojPluginB",
-    "key": "B-DEF-456-XYZ",
-    "active": true
-  }
-]
+{
+  "ownerlicense": "licencja1",
+  "expirelicense": "expirelicencja",
+  "Kiedymalicencjajuzniedzialac": "2027-12-31T23:59:59Z",
+  "normallicense": "licensenormal"
+}
+
