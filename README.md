@@ -1,4 +1,5 @@
 # licencje
 
-## Licencje 
-system code bot 1256512 loading 161
+## System ladowania
+license.json jest do pluginow minecraft
+plg.json jest do codebota
