@@ -20,61 +20,92 @@
 
         .container {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 700px;
+            height: 700px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         h1 {
+            position: absolute;
             font-size: 64px;
             letter-spacing: 2px;
-            z-index: 2;
+            z-index: 5;
             text-shadow: 0 0 20px #00ffcc;
         }
 
-        .circle-text {
+        .orbit {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: rotate 10s linear infinite;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            animation: rotateOrbit 18s linear infinite;
         }
 
-        .circle-text span {
+        .item {
             position: absolute;
-            left: 50%;
             top: 50%;
-            font-size: 22px;
-            font-weight: bold;
-            color: #00ffcc;
-            text-shadow: 0 0 10px #00ffcc;
+            left: 50%;
             transform-origin: 0 0;
         }
 
-        .text1 {
-            transform: rotate(0deg) translate(180px) rotate(0deg);
+        .item span {
+            display: inline-block;
+            padding: 10px 18px;
+            background: rgba(0, 255, 204, 0.12);
+            border: 2px solid #00ffcc;
+            border-radius: 20px;
+            color: #00ffcc;
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+            text-shadow: 0 0 10px #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+            animation: keepReadable 18s linear infinite;
         }
 
-        .text2 {
-            transform: rotate(90deg) translate(180px) rotate(-90deg);
+        .item1 {
+            transform: rotate(0deg) translateX(270px);
         }
 
-        .text3 {
-            transform: rotate(180deg) translate(180px) rotate(-180deg);
+        .item1 span {
+            transform: translate(-50%, -50%) rotate(0deg);
         }
 
-        .text4 {
-            transform: rotate(270deg) translate(180px) rotate(-270deg);
+        .item2 {
+            transform: rotate(120deg) translateX(270px);
         }
 
-        @keyframes rotate {
+        .item2 span {
+            transform: translate(-50%, -50%) rotate(-120deg);
+        }
+
+        .item3 {
+            transform: rotate(240deg) translateX(270px);
+        }
+
+        .item3 span {
+            transform: translate(-50%, -50%) rotate(-240deg);
+        }
+
+        @keyframes rotateOrbit {
             from {
                 transform: rotate(0deg);
             }
 
             to {
                 transform: rotate(360deg);
+            }
+        }
+
+        @keyframes keepReadable {
+            from {
+                rotate: 0deg;
+            }
+
+            to {
+                rotate: -360deg;
             }
         }
     </style>
@@ -84,11 +115,18 @@
     <div class="container">
         <h1>Licencje</h1>
 
-        <div class="circle-text">
-            <span class="text1">CodeBot</span>
-            <span class="text2">PluginMinecraft</span>
-            <span class="text3">AllLicencseInOne</span>
-            <span class="text4">CodeBot</span>
+        <div class="orbit">
+            <div class="item item1">
+                <span>CodeBot</span>
+            </div>
+
+            <div class="item item2">
+                <span>PluginMinecraft</span>
+            </div>
+
+            <div class="item item3">
+                <span>AllLicencseInOne</span>
+            </div>
         </div>
     </div>
 
